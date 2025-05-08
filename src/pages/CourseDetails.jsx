@@ -26,7 +26,6 @@ function CourseDetails() {
 
   // Getting courseId from url parameter
   const { courseId } = useParams()
-  // console.log(`course id: ${courseId}`)
 
   // Declear a state to save the course details
   const [response, setResponse] = useState(null)
@@ -62,7 +61,7 @@ function CourseDetails() {
     setIsActive(
       !isActive.includes(id)
         ? isActive.concat([id])
-        : isActive.filter((e) => e != id)
+        : isActive.filter((e) => e !== id)
     )
   }
 
